@@ -1,4 +1,6 @@
 services:
   vsftpd:
     ports:
+      - ${VSFTPD_PORT_20}:20
       - ${VSFTPD_PORT_21}:21
+      - ${VSFTPD_PASV_MAX_PORT}-${VSFTPD_PASV_MIN_PORT}:${VSFTPD_PASV_MAX_PORT}-${VSFTPD_PASV_MIN_PORT}
